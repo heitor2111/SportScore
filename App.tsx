@@ -1,13 +1,17 @@
 import React from 'react'
 
-import { Box, NativeBaseProvider, Text } from 'native-base'
+import { NativeBaseProvider } from 'native-base'
+import { Main } from './src/navigators'
+import { NavigationContainer } from '@react-navigation/native'
 
 const App = () => {
-  return <NativeBaseProvider>
-    <Box safeArea bg="primary.400" p="12" rounded="lg">
-      <Text fontSize="xs">Hello World!</Text>
-    </Box>
-  </NativeBaseProvider>
+  return (
+    <NavigationContainer>
+      <NativeBaseProvider>
+        <Main />
+      </NativeBaseProvider>
+    </NavigationContainer>
+  )
 }
 
 export default App
