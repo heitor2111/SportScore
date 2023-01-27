@@ -3,7 +3,7 @@ import type { ScreenList } from './interfaces'
 
 const screenList: ScreenList = [
   { name: 'Menu', component: Home },
-  { name: 'Grupos', component: Groups },
+  { name: 'Grupos', component: Groups }
 ]
 
 export default screenList
