@@ -1,10 +1,13 @@
 import React from 'react'
-import { Box, Text } from 'native-base'
+import { Text } from 'native-base'
+import { ScreenContainer } from '../../components'
 
 const Groups = () => {
-  return <Box bg="primary.400" p="12" rounded="lg">
-    <Text fontSize="xl">Página Grupos</Text>
-  </Box>
+  return (
+    <ScreenContainer>
+      <Text>Página de Grupos</Text>
+    </ScreenContainer>
+  )
 }
 
 export default Groups

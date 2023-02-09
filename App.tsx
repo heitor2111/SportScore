@@ -1,13 +1,20 @@
 import React from 'react'
 
-import { NativeBaseProvider } from 'native-base'
+import { extendTheme, NativeBaseProvider } from 'native-base'
 import { Main } from './src/navigators'
 import { NavigationContainer } from '@react-navigation/native'
 
 const App = () => {
+  const customTheme = extendTheme({
+    config: {
+      useSystemColorMode: false,
+      initialColorMode: 'dark'
+    }
+  })
+
   return (
     <NavigationContainer>
-      <NativeBaseProvider>
+      <NativeBaseProvider theme={customTheme}>
         <Main />
       </NativeBaseProvider>
     </NavigationContainer>

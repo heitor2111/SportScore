@@ -1,20 +1,26 @@
 import React from 'react'
-import { Box, Button, Text } from 'native-base'
+import { Button, Text } from 'native-base'
 import { useNavigation } from '@react-navigation/native'
+import { ScreenContainer } from '../../components'
+import { type MainNavigation } from '../../navigators/Main/interfaces'
 
 const Home = () => {
-  const { navigate } = useNavigation()
+  const { navigate } = useNavigation<MainNavigation>()
 
-  return <Box bg="primary.400" p="12" rounded="lg">
-    <Text fontSize="xl">Página Inicial</Text>
+  return (
+    <ScreenContainer>
+      <Text>Página Principal</Text>
 
-    <Button
-      colorScheme="primary"
-      onPress={() => { navigate('Grupos' as never) }}
-    >
-      Ir para Grupos
-    </Button>
-  </Box>
+      <Button
+        colorScheme="primary"
+        onPress={() => {
+          navigate('Groups')
+        }}
+      >
+        Ir para Grupos
+      </Button>
+    </ScreenContainer>
+  )
 }
 
 export default Home
