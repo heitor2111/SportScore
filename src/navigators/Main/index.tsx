@@ -20,15 +20,15 @@ const Main = () => {
           </Button>
         ),
         statusBarColor:
-          colorMode === 'dark' ? colors.dark[200] : colors.light[200],
+          colorMode === 'dark' ? colors.blueGray[800] : colors.blueGray[100],
         headerStyle: {
           backgroundColor:
-            colorMode === 'dark' ? colors.dark[200] : colors.light[200]
+            colorMode === 'dark' ? colors.blueGray[800] : colors.blueGray[100]
         },
         headerTitleStyle: {
-          color: colorMode === 'dark' ? colors.light[200] : colors.dark[200]
+          color: colorMode === 'dark' ? colors.blueGray[100] : colors.blueGray[800]
         },
-        headerTintColor: colorMode === 'dark' ? colors.light[200] : colors.dark[200]
+        headerTintColor: colorMode === 'dark' ? colors.blueGray[100] : colors.blueGray[800]
       }}
     >
       {screenList.map((screen, index) => (

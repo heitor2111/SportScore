@@ -9,8 +9,8 @@ interface ScreenContainerProps {
 const ScreenContainer = ({ children }: ScreenContainerProps) => {
   return (
     <Box
-      _dark={{ bgColor: 'dark.100' }}
-      _light={{ bgColor: 'light.100' }}
+      _dark={{ bgColor: 'blueGray.900' }}
+      _light={{ bgColor: 'blueGray.200' }}
       h="100%"
       p="4"
     >
